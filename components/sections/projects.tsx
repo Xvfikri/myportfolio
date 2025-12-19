@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
-import { Github, ExternalLink } from "lucide-react"
+import { Github, ExternalLink, ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import {
@@ -14,49 +14,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
-
-const projects = [
-    {
-        title: "MyBioskopId",
-        description: "A movie streaming platform with a modern and user-friendly interface. Features real-time movie updates, user profiles, and a responsive design.",
-        image: "/projects/mybioskopid.png",
-        tags: ["Vue.js", "TypeScript", "Tailwind CSS"],
-        links: {
-            demo: "https://my-bioskop-id-b3z1.vercel.app/",
-            github: "https://github.com/Xvfikri/MyBioskopId"
-        }
-    },
-    {
-        title: "TODO List",
-        description: "A simple todo list application with a modern and user-friendly interface. Features real-time movie updates, user profiles, and a responsive design.",
-        image: "/projects/todolist.png",
-        tags: ["Next.js", "TypeScript", "Tailwind CSS", "Radix UI", "Lucide React"],
-        links: {
-            demo: "https://node-wave-front-end-assessment.vercel.app/",
-            github: "https://github.com/Xvfikri/NodeWave-Front-End-Assessment?tab=readme-ov-file"
-        }
-    },
-    {
-        title: "Fleek Creative",
-        description: "A productivity tool for agile teams. Kanban boards, sprint planning, and team collaboration features with dark mode support.",
-        image: "/projects/fleek.png",
-        tags: ["Next.js", "Prisma", "PostgreSQL", "Zustand"],
-        links: {
-            demo: "#",
-            github: "#"
-        }
-    },
-    {
-        title: "AI Chat Assistant",
-        description: "An intelligent chat interface powered by large language models. Features syntax highlighting for code, streaming responses, and chat history.",
-        image: "/projects/ecommerce.png", // Reusing image for demo
-        tags: ["Next.js", "OpenAI API", "Tailwind CSS", "Vercel SDK"],
-        links: {
-            demo: "#",
-            github: "#"
-        }
-    },
-]
+import { projects } from "@/lib/data"
 
 export function Projects() {
     return (
@@ -70,7 +28,12 @@ export function Projects() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl font-bold tracking-tight mb-4 sm:text-4xl">Featured Projects</h2>
-                    <p className="text-muted-foreground text-lg">Swipe to explore my recent work.</p>
+                    <p className="text-muted-foreground text-lg mb-8">Swipe to explore my recent work.</p>
+                    <Button variant="outline" asChild>
+                        <Link href="/projects">
+                            View All Projects <ArrowUpRight className="ml-2 h-4 w-4" />
+                        </Link>
+                    </Button>
                 </motion.div>
 
                 <div className="max-w-[1400px] mx-auto px-4 md:px-12">
@@ -83,7 +46,7 @@ export function Projects() {
                     >
                         <CarouselContent className="-ml-4">
                             {projects.map((project, index) => (
-                                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2 xl:basis-1/3 pl-4">
+                                <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/2 xl:basis-1/3 pl-4">
                                     <motion.div
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
@@ -93,27 +56,33 @@ export function Projects() {
                                     >
                                         <Card className="overflow-hidden flex flex-col h-full hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-2 border-primary/10 bg-card/50 backdrop-blur-sm group">
                                             <div className="relative aspect-video overflow-hidden">
-                                                <Image
-                                                    src={project.image}
-                                                    alt={project.title}
-                                                    fill
-                                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                                />
-                                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                                                    <Button variant="secondary" size="sm" asChild className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                                        <Link href={project.links.github} target="_blank">
-                                                            <Github className="mr-2 h-4 w-4" /> Code
-                                                        </Link>
-                                                    </Button>
-                                                    <Button size="sm" asChild className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                                                        <Link href={project.links.demo} target="_blank">
-                                                            <ExternalLink className="mr-2 h-4 w-4" /> Demo
-                                                        </Link>
-                                                    </Button>
+                                                <Link href={`/projects/${project.slug}`}>
+                                                    <Image
+                                                        src={project.image}
+                                                        alt={project.title}
+                                                        fill
+                                                        className="object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer"
+                                                    />
+                                                </Link>
+                                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 pointer-events-none">
+                                                    <div className="pointer-events-auto flex gap-4">
+                                                        <Button variant="secondary" size="sm" asChild className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                                            <Link href={project.links.github} target="_blank">
+                                                                <Github className="mr-2 h-4 w-4" /> Code
+                                                            </Link>
+                                                        </Button>
+                                                        <Button size="sm" asChild className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                                                            <Link href={project.links.demo} target="_blank">
+                                                                <ExternalLink className="mr-2 h-4 w-4" /> Demo
+                                                            </Link>
+                                                        </Button>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <CardHeader className="p-6">
-                                                <CardTitle className="text-xl group-hover:text-primary transition-colors">{project.title}</CardTitle>
+                                                <Link href={`/projects/${project.slug}`} className="hover:underline decoration-primary underline-offset-4">
+                                                    <CardTitle className="text-xl group-hover:text-primary transition-colors">{project.title}</CardTitle>
+                                                </Link>
                                                 <CardDescription className="line-clamp-2 text-base mt-2">{project.description}</CardDescription>
                                             </CardHeader>
                                             <CardContent className="flex-1 px-6 pb-6 pt-0">
