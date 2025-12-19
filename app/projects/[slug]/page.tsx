@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, ExternalLink, Github, Calendar, User, Code2, CheckCircle2 } from "lucide-react"
 import { FloatingNav } from "@/components/floating-nav"
 import { Footer } from "@/components/footer"
-import { CustomCursor } from "@/components/ui/custom-cursor"
 
 interface ProjectPageProps {
     params: Promise<{

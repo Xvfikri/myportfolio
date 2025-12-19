@@ -10,7 +10,6 @@ import Image from "next/image"
 import { projects } from "@/lib/data"
 import { FloatingNav } from "@/components/floating-nav"
 import { Footer } from "@/components/footer"
-import { CustomCursor } from "@/components/ui/custom-cursor"
 
 export default function ProjectsPage() {
     return (

@@ -7,7 +7,6 @@ import { Education } from "@/components/sections/education";
 import { Projects } from "@/components/sections/projects";
 import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/footer";
-import { CustomCursor } from "@/components/ui/custom-cursor";
 
 export default function Home() {
   return (
