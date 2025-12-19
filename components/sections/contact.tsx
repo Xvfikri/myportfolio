@@ -52,19 +52,19 @@ export function Contact() {
                                         </div>
                                         <div>
                                             <p className="text-sm font-medium">Email Me</p>
-                                            <a href="mailto:contact@alfikri.dev" className="text-lg font-semibold hover:text-primary transition-colors">contact@alfikri.dev</a>
+                                            <a href="mail.google.com/muhamadalfikri077@gmail.com" className="text-lg font-semibold hover:text-primary transition-colors">muhamadalfikri077@gmail.com</a>
                                         </div>
                                     </CardContent>
                                 </Card>
 
                                 <div className="flex gap-4">
                                     <Button variant="outline" size="lg" className="flex-1" asChild>
-                                        <Link href="https://github.com" target="_blank">
+                                        <Link href="https://github.com/Xvfikri" target="_blank">
                                             <Github className="mr-2 h-5 w-5" /> GitHub
                                         </Link>
                                     </Button>
                                     <Button variant="outline" size="lg" className="flex-1" asChild>
-                                        <Link href="https://linkedin.com" target="_blank">
+                                        <Link href="https://www.linkedin.com/in/alfikri1403/" target="_blank">
                                             <Linkedin className="mr-2 h-5 w-5" /> LinkedIn
                                         </Link>
                                     </Button>
@@ -89,11 +89,11 @@ export function Contact() {
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div className="space-y-2">
                                             <label htmlFor="name" className="text-sm font-medium">Name</label>
-                                            <Input id="name" placeholder="John Doe" required />
+                                            <Input id="name" placeholder="name" required />
                                         </div>
                                         <div className="space-y-2">
                                             <label htmlFor="email" className="text-sm font-medium">Email</label>
-                                            <Input id="email" type="email" placeholder="john@example.com" required />
+                                            <Input id="email" type="email" placeholder="muhamadalfikri077@gmail.com" required />
                                         </div>
                                     </div>
                                     <div className="space-y-2">

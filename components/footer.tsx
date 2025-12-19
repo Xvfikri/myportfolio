@@ -20,12 +20,12 @@ export function Footer() {
 
                     <div className="flex gap-4">
                         <Button variant="ghost" size="icon" asChild>
-                            <Link href="https://github.com" target="_blank" aria-label="Github">
+                            <Link href="https://github.com/Xvfikri" target="_blank" aria-label="Github">
                                 <Github className="h-5 w-5" />
                             </Link>
                         </Button>
                         <Button variant="ghost" size="icon" asChild>
-                            <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                            <Link href="https://www.linkedin.com/in/alfikri1403/" target="_blank" aria-label="LinkedIn">
                                 <Linkedin className="h-5 w-5" />
                             </Link>
                         </Button>

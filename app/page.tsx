@@ -1,4 +1,4 @@
-import { Nav } from "@/components/nav";
+import { FloatingNav } from "@/components/floating-nav";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Skills } from "@/components/sections/skills";
@@ -7,12 +7,12 @@ import { Education } from "@/components/sections/education";
 import { Projects } from "@/components/sections/projects";
 import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/footer";
+import { CustomCursor } from "@/components/ui/custom-cursor";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground selection:bg-primary/20 selection:text-primary relative selection:bg-purple-500/30">
-      <div className="fixed inset-0 z-[-1] bg-background bg-grid-small bg-repeat [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-30 dark:opacity-20" />
-      <Nav />
+    <main className="min-h-screen text-foreground selection:bg-primary/20 selection:text-primary relative selection:bg-purple-500/30">
+      <FloatingNav />
       <Hero />
       <About />
       <Skills />
