@@ -145,3 +145,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+@utility animate-aurora {
+  animation: aurora 60s linear infinite;
+}
+
+@keyframes aurora {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
