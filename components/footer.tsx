@@ -29,11 +29,6 @@ export function Footer() {
                                 <Linkedin className="h-5 w-5" />
                             </Link>
                         </Button>
-                        <Button variant="ghost" size="icon" asChild>
-                            <Link href="https://twitter.com" target="_blank" aria-label="Twitter">
-                                <Twitter className="h-5 w-5" />
-                            </Link>
-                        </Button>
                     </div>
                 </div>
 

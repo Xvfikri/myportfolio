@@ -28,7 +28,7 @@ const experiences = [
         type: "Remote Contract",
         duration: "February 2025 – September 2025",
         description: "Building a e-commerce website for a local company using Laravel Jquery. Implementing responsive design and integrating third-party APIs.",
-        skills: ["Laravel", "Jquery", "TypeScript", "Bootstrap"],
+        skills: ["Laravel", "Jquery", "TypeScript", "Bootstrap", "Flutter"],
     },
     {
         company: "Salam Project",

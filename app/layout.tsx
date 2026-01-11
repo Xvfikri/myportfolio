@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Muhamad ALfikri Syahputra | Portfolio",
-  description: "Frontend and Fullstack Developer building digital solutions.",
+  description: "Frontend and Mobile Developer building digital solutions.",
 };
 
 export default function RootLayout({

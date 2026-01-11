@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 const skillCategories = [
     {
         title: "Frontend",
-        skills: ["React", "Next.js", "Laravel", "Nuxt.js", "JavaScript", "TypeScript", "Tailwind CSS", "Framer Motion", "Vuetify", "Bootstrap", "Redux", "Zustand"],
+        skills: ["Next.js", "Laravel", "Nuxt.js", "Vuew.Js", "JavaScript", "TypeScript", "Tailwind CSS", "Framer Motion", "Vuetify", "Bootstrap", "Redux", "Zustand"],
     },
     {
         title: "Mobile Developer",
@@ -15,11 +15,11 @@ const skillCategories = [
     },
     {
         title: "Database",
-        skills: ["PostgreSQL", "MongoDB", "MySQL", "Prisma", "Supabase", "Firebase"],
+        skills: [ "MongoDB", "MySQL", "Firebase"],
     },
     {
         title: "Tools & Others",
-        skills: ["Git", "GitHub", "Docker", "AWS", "Figma", "Jest", "CI/CD", "Vercel"],
+        skills: ["Git", "GitHub", "BitBucket", "Figma", "Jest", "CI/CD", "Vercel"],
     },
 ]
 

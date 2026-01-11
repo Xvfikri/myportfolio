@@ -14,9 +14,9 @@ const education = [
     },
     {
         institution: "Udemy",
-        degree: "Full Stack Web Development Bootcamp",
+        degree: "Ethical Hacking / Penetesting & Bug Bounty ",
         duration: "2025",
-        description: "Certified MongoDB Developer.",
+        description: "Certified Udemy Ethical Hacking / Penetesting & Bug Bounty .",
     },
     {
         institution: "MongoDb",
@@ -26,9 +26,15 @@ const education = [
     },
     {
         institution: "Google Coursera",
-        degree: "Full Stack Web Development Bootcamp",
+        degree: "IT Support Google Aug 25 2025",
         duration: "2022",
-        description: "Intensive 12-week program covering React, Node.js, and Database Management.",
+        description: "Certified IT Support Google.",
+    },
+    {
+        institution: "BuildWithAngga",
+        degree: "Web Security Penetration Tester & Bug Bounty",
+        duration: "2025",
+        description: "Certified Web Security Penetration Tester & Bug Bounty.",
     },
 ]
 

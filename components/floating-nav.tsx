@@ -45,7 +45,7 @@ export function FloatingNav() {
                 scrolled ? "scale-90" : "scale-100"
             )}>
                 <Link href="/" className="font-bold text-lg mr-4 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
-                    AL.dev
+                    AL.Dev
                 </Link>
 
                 <div className="hidden md:flex items-center gap-6 text-sm font-medium">

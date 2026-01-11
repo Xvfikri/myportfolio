@@ -98,7 +98,7 @@ export function Contact() {
                                     </div>
                                     <div className="space-y-2">
                                         <label htmlFor="subject" className="text-sm font-medium">Subject</label>
-                                        <Input id="subject" placeholder="Project Inquiry" required />
+                                        <Input id="subject" placeholder="" required />
                                     </div>
                                     <div className="space-y-2">
                                         <label htmlFor="message" className="text-sm font-medium">Message</label>
