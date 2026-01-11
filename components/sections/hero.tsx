@@ -54,7 +54,7 @@ export function Hero() {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
-                        Fullstack Developer passionate about creating seamless user experiences and robust backend systems.
+                        Frontend And Mobile Developer passionate about creating seamless user experiences and robust backend systems.
                     </motion.p>
 
                     <motion.div
@@ -90,7 +90,7 @@ export function Hero() {
                             <Github className="h-6 w-6" />
                             <span className="sr-only">GitHub</span>
                         </Link>
-                        <Link href="https://linkedin.com" target="_blank" className="text-zinc-400 dark:text-white/80 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110">
+                        <Link href="https://www.linkedin.com/in/alfikri1403/" target="_blank" className="text-zinc-400 dark:text-white/80 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110">
                             <Linkedin className="h-6 w-6" />
                             <span className="sr-only">LinkedIn</span>
                         </Link>
@@ -120,6 +120,7 @@ export function Hero() {
                                 src="/projects/profile.jpg"
                                 alt="Muhamad ALfikri Syahputra"
                                 fill
+                                sizes="(max-width: 768px) 288px, 384px"
                                 className="object-cover"
                             />
 
@@ -138,11 +139,11 @@ export function Hero() {
                         >
                             <div className="flex items-center gap-3">
                                 <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                                    5+
+                                    2+
                                 </div>
                                 <div className="text-sm">
                                     <p className="font-bold text-foreground">Years Experience</p>
-                                    <p className="text-muted-foreground">Fullstack Dev</p>
+                                    <p className="text-muted-foreground">Frontend & Mobile Dev</p>
                                 </div>
                             </div>
                         </motion.div>
