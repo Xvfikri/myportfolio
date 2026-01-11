@@ -67,11 +67,13 @@ export function Projects() {
                                                 </Link>
                                                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 pointer-events-none">
                                                     <div className="pointer-events-auto flex gap-4">
-                                                        <Button variant="secondary" size="sm" asChild className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                                            <Link href={project.links.github} target="_blank">
-                                                                <Github className="mr-2 h-4 w-4" /> Code
-                                                            </Link>
-                                                        </Button>
+                                                        {!project.isConfidential && (
+                                                            <Button variant="secondary" size="sm" asChild className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                                                <Link href={project.links.github} target="_blank">
+                                                                    <Github className="mr-2 h-4 w-4" /> Code
+                                                                </Link>
+                                                            </Button>
+                                                        )}
                                                         <Button size="sm" asChild className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                                                             <Link href={`/projects/${project.slug}`}>
                                                                 <ExternalLink className="mr-2 h-4 w-4" /> Detail
@@ -79,11 +81,23 @@ export function Projects() {
                                                         </Button>
                                                     </div>
                                                 </div>
+                                                {project.isConfidential && (
+                                                    <div className="absolute top-4 right-4 z-10">
+                                                        <Badge variant="secondary" className="bg-background/80 backdrop-blur-md border-primary/20 text-xs py-1 px-2 uppercase tracking-wider font-bold">
+                                                            Corporate
+                                                        </Badge>
+                                                    </div>
+                                                )}
                                             </div>
                                             <CardHeader className="p-6">
-                                                <Link href={`/projects/${project.slug}`} className="hover:underline decoration-primary underline-offset-4">
-                                                    <CardTitle className="text-xl group-hover:text-primary transition-colors">{project.title}</CardTitle>
-                                                </Link>
+                                                <div className="flex flex-col gap-1 mb-2">
+                                                    {project.company && (
+                                                        <span className="text-xs font-semibold text-primary uppercase tracking-widest">{project.company}</span>
+                                                    )}
+                                                    <Link href={`/projects/${project.slug}`} className="hover:underline decoration-primary underline-offset-4">
+                                                        <CardTitle className="text-xl group-hover:text-primary transition-colors">{project.title}</CardTitle>
+                                                    </Link>
+                                                </div>
                                                 <CardDescription className="line-clamp-2 text-base mt-2">{project.description}</CardDescription>
                                             </CardHeader>
                                             <CardContent className="flex-1 px-6 pb-6 pt-0">

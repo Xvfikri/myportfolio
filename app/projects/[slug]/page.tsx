@@ -134,6 +134,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                                     </div>
                                 </div>
 
+                                {project.company && (
+                                    <div className="flex items-center gap-3 text-muted-foreground border-t border-border pt-4">
+                                        <CheckCircle2 className="h-5 w-5 text-primary" />
+                                        <div>
+                                            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground/70">Organization</p>
+                                            <p className="text-foreground">{project.company}</p>
+                                        </div>
+                                    </div>
+                                )}
+
                                 <div className="space-y-3 pt-4 border-t border-border">
                                     <h4 className="text-sm font-medium flex items-center gap-2">
                                         <Code2 className="h-4 w-4 text-primary" />
@@ -156,14 +166,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                             <div className="space-y-3 pt-4">
                                 <Button className="w-full" size="lg" asChild>
                                     <Link href={project.links.demo} target="_blank">
-                                        <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                                        <ExternalLink className="mr-2 h-4 w-4" />
+                                        {project.isConfidential ? "Visit Project" : "Live Demo"}
                                     </Link>
                                 </Button>
-                                <Button variant="outline" className="w-full" size="lg" asChild>
-                                    <Link href={project.links.github} target="_blank">
-                                        <Github className="mr-2 h-4 w-4" /> View Source
-                                    </Link>
-                                </Button>
+                                {!project.isConfidential && (
+                                    <Button variant="outline" className="w-full" size="lg" asChild>
+                                        <Link href={project.links.github} target="_blank">
+                                            <Github className="mr-2 h-4 w-4" /> View Source
+                                        </Link>
+                                    </Button>
+                                )}
+                                {project.isConfidential && (
+                                    <p className="text-[10px] text-center text-muted-foreground/60 italic">
+                                        Source code is private for corporate security and NDA compliance.
+                                    </p>
+                                )}
                             </div>
                         </div>
                     </div>

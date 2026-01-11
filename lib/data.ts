@@ -8,6 +8,8 @@ export type Project = {
     tags: string[];
     role?: string;
     timeline?: string;
+    isConfidential?: boolean;
+    company?: string;
     links: {
         demo: string;
         github: string;
@@ -176,6 +178,81 @@ export const projects: Project[] = [
             "Faculty management dashboard",
             "Course schedule and resource management",
             "Automated academic reporting"
+        ]
+    },
+    {
+        id: "8",
+        title: "CyberQuis",
+        slug: "cyberquis",
+        company: "CyberArmy Indonesia",
+        isConfidential: true,
+        description: "A comprehensive quiz and assessment platform developed for CyberArmy Indonesia to facilitate cybersecurity training and evaluation.",
+        longDescription: "CyberQuis is a specialized assessment platform designed for cybersecurity professionals and students. Developed during my time at CyberArmy Indonesia, it features a variety of quiz formats, real-time scoring, and detailed performance analytics. To respect corporate confidentiality, the source code is private, but the project demonstrates advanced state management and responsive UI patterns using Vue.js and Vuetify.",
+        image: "/projects/cyberquis.png",
+        tags: ["Vue.js", "Vuetify", "JavaScript", "State Management"],
+        role: "Frontend Developer",
+        timeline: "2024",
+        links: {
+            demo: "https://cyberarmy.id",
+            github: "#"
+        },
+        techStack: ["Vue.js 2/3", "Vuetify", "Vuex", "Axios", "REST API"],
+        features: [
+            "Advanced quiz engine with multiple question types",
+            "Real-time scoring and feedback system",
+            "Leaderboard and performance tracking",
+            "Responsive administrative dashboard",
+            "Secure authentication and authorization"
+        ]
+    },
+    {
+        id: "9",
+        title: "Konsul Pintar",
+        slug: "konsul-pintar",
+        company: "Aku Pintar Indonesia",
+        isConfidential: true,
+        description: "An integrated consultation module for the Aku Pintar ecosystem, connecting students with educational consultants.",
+        longDescription: "Konsul Pintar is a core module within the Aku Pintar ecosystem that facilitates direct interaction between students and educational experts. Built with Next.js and Tailwind CSS, it features real-time chat, appointment scheduling, and a seamless user experience integrated with the main platform. This project showcases large-scale application architecture and performance optimization in a high-traffic environment.",
+        image: "/projects/konsulpintar.png",
+        tags: ["Next.js", "Tailwind CSS", "TypeScript", "Real-time"],
+        role: "Frontend Developer",
+        timeline: "2025",
+        links: {
+            demo: "https://akupintar.id",
+            github: "#"
+        },
+        techStack: ["Next.js 14", "Tailwind CSS", "TypeScript", "TanStack Query", "Socket.io"],
+        features: [
+            "Real-time chat functionality",
+            "Consultant availability scheduling",
+            "Integrated payment gateway for premium sessions",
+            "User-friendly consultation history",
+            "Optimized for high-concurrency usage"
+        ]
+    },
+    {
+        id: "10",
+        title: "Aku Pintar Indonesia Website",
+        slug: "aku-pintar-website",
+        company: "Aku Pintar Indonesia",
+        isConfidential: true,
+        description: "The primary web platform for Aku Pintar, serving millions of students across Indonesia with educational resources and tools.",
+        longDescription: "The official website of Aku Pintar Indonesia, a leading ed-tech platform. I contributed to the modernization of the portal using Next.js and Tailwind CSS, focusing on SEO optimization, mobile responsiveness, and scalable component architecture. The platform includes diagnostic tests, school databases, and extensive educational content tailored for Indonesian students.",
+        image: "/projects/akupintar.png",
+        tags: ["Next.js", "Tailwind CSS", "SEO", "Scalable UI"],
+        role: "Frontend Developer",
+        timeline: "2025",
+        links: {
+            demo: "https://akupintar.id",
+            github: "#"
+        },
+        techStack: ["Next.js 15", "Tailwind CSS", "TypeScript", "Contentful CMS", "AWS"],
+        features: [
+            "Highly optimized landing pages for SEO",
+            "Large-scale school and university database search",
+            "Interactive diagnostic and interest tests",
+            "Comprehensive student and parent dashboards",
+            "Multi-tenant content management system"
         ]
     },
 ];
