@@ -54,7 +54,7 @@ export function Hero() {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
-                        Frontend And Mobile Developer passionate about creating seamless user experiences and robust backend systems.
+                        Frontend And Mobile Developer passionate about creating seamless user experiences.
                     </motion.p>
 
                     <motion.div
