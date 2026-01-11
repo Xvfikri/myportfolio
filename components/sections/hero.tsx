@@ -11,7 +11,8 @@ export function Hero() {
     return (
         <section id="hero" className="min-h-screen pt-16 flex items-center justify-center overflow-hidden">
             {/* Ambient Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 blur-[100px] -z-10 rounded-full dark:bg-primary/10" />
+            {/* Ambient Glow - Reduced blur on mobile for GPU performance */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-primary/20 blur-[60px] md:blur-[100px] -z-10 rounded-full dark:bg-primary/10 transition-all" />
 
             <div className="container px-4 flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-24 z-10">
                 {/* Text Content */}
@@ -114,26 +115,25 @@ export function Hero() {
                             <div className="w-full h-full flex items-center justify-center bg-zinc-100 dark:bg-zinc-800 text-muted-foreground">
                                 <span className="text-sm">Your Photo Here</span>
                             </div>
-                            {/* Uncomment below when you have an image */}
-
+                            {/* Priority added for better LCP */}
                             <Image
                                 src="/projects/profile.jpg"
                                 alt="Muhamad ALfikri Syahputra"
                                 fill
+                                priority
                                 sizes="(max-width: 768px) 288px, 384px"
                                 className="object-cover"
                             />
-
                         </div>
 
-                        {/* Floating Badge */}
+                        {/* Floating Badge - Optimized frequency/intensity for mobile */}
                         <motion.div
                             className="absolute -bottom-6 -left-6 z-30 bg-background/80 backdrop-blur-md p-4 rounded-xl border shadow-lg"
                             initial={{ y: 0 }}
                             animate={{ y: [0, -10, 0] }}
                             transition={{
                                 repeat: Infinity,
-                                duration: 3,
+                                duration: 5, // Slower duration for less frequent repaints
                                 ease: "easeInOut"
                             }}
                         >

@@ -15,7 +15,7 @@ const skillCategories = [
     },
     {
         title: "Database",
-        skills: [ "MongoDB", "MySQL", "Firebase"],
+        skills: ["MongoDB", "MySQL", "Firebase"],
     },
     {
         title: "Tools & Others",
@@ -44,10 +44,10 @@ export function Skills() {
                             key={category.title}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-50px" }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                         >
-                            <Card className="h-full hover:shadow-lg transition-shadow bg-card/50 backdrop-blur-sm border-primary/10">
+                            <Card className="h-full hover:shadow-lg transition-shadow bg-card/50 backdrop-blur-[4px] md:backdrop-blur-sm border-primary/10">
                                 <CardHeader>
                                     <CardTitle className="text-xl text-primary">{category.title}</CardTitle>
                                 </CardHeader>

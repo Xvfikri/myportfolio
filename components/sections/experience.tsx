@@ -77,7 +77,7 @@ export function Experience() {
                             key={index}
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-50px" }}
                             transition={{ delay: index * 0.2, duration: 0.5 }}
                             className="relative pl-8 border-l-2 border-primary/20 last:border-0"
                         >

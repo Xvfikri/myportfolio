@@ -50,11 +50,11 @@ export function Projects() {
                                     <motion.div
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
-                                        viewport={{ once: true }}
+                                        viewport={{ once: true, margin: "-50px" }}
                                         transition={{ delay: index * 0.1, duration: 0.5 }}
                                         className="h-full p-1"
                                     >
-                                        <Card className="overflow-hidden flex flex-col h-full hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-2 border-primary/10 bg-card/50 backdrop-blur-sm group">
+                                        <Card className="overflow-hidden flex flex-col h-full hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-2 border-primary/10 bg-card/50 backdrop-blur-[4px] md:backdrop-blur-sm group">
                                             <div className="relative aspect-video overflow-hidden">
                                                 <Link href={`/projects/${project.slug}`}>
                                                     <Image

@@ -41,7 +41,7 @@ export function FloatingNav() {
             )}
         >
             <nav className={cn(
-                "flex items-center gap-4 bg-background/50 backdrop-blur-md border border-white/10 shadow-lg px-6 py-3 rounded-full pointer-events-auto transition-all duration-300",
+                "flex items-center gap-4 bg-background/50 backdrop-blur-[6px] md:backdrop-blur-md border border-white/10 shadow-lg px-6 py-3 rounded-full pointer-events-auto transition-all duration-300",
                 scrolled ? "scale-90" : "scale-100"
             )}>
                 <Link href="/" className="font-bold text-lg mr-4 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
