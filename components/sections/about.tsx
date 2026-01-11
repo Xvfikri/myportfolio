@@ -16,13 +16,14 @@ export function About() {
                     <h2 className="text-3xl font-bold tracking-tight mb-8 sm:text-4xl">About Me</h2>
                     <div className="text-lg text-muted-foreground space-y-6 leading-relaxed">
                         <p>
-                            I am a passionate and dedicated Frontend and Fullstack Developer with a knack for crafting robust and scalable web applications.
+                            I am a passionate and dedicated Fullstack Developer and a proud graduate of <span className="text-primary font-semibold">Telkom University</span>.
                             My journey in web development is driven by a desire to create seamless user experiences and solve complex problems through code.
                             Efficiency and performance are key to my development philosophy.
                         </p>
                         <p>
-                            With a strong foundation in modern web technologies like Next.js, React, and TypeScript, I bring ideas to life with clean, efficient, and maintainable code.
-                            I thrive in collaborative environments and am always eager to learn new tools and frameworks to stay ahead in the ever-evolving tech landscape.
+                            With a strong foundation in modern web technologies, I specialize in building robust applications using
+                            <span className="text-foreground font-medium"> Next.js, Nuxt.js, Laravel, Vue.js,</span> and <span className="text-foreground font-medium">Flutter</span>.
+                            I bring ideas to life with clean, efficient, and maintainable code, whether it&apos;s a complex web ecosystem or a high-performance mobile application.
                         </p>
                     </div>
                 </motion.div>
