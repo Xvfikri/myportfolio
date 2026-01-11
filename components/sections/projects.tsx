@@ -61,6 +61,7 @@ export function Projects() {
                                                         src={project.image}
                                                         alt={project.title}
                                                         fill
+                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                         className="object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer"
                                                     />
                                                 </Link>
@@ -72,8 +73,8 @@ export function Projects() {
                                                             </Link>
                                                         </Button>
                                                         <Button size="sm" asChild className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                                                            <Link href={project.links.demo} target="_blank">
-                                                                <ExternalLink className="mr-2 h-4 w-4" /> Demo
+                                                            <Link href={`/projects/${project.slug}`}>
+                                                                <ExternalLink className="mr-2 h-4 w-4" /> Detail
                                                             </Link>
                                                         </Button>
                                                     </div>

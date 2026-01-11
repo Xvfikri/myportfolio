@@ -72,10 +72,10 @@ export const projects: Project[] = [
         image: "/projects/fleek.png",
         tags: ["Next.js", "Prisma", "PostgreSQL", "Zustand"],
         role: "Fullstack Developer",
-        timeline: "2024",
+        timeline: "2025",
         links: {
-            demo: "#",
-            github: "#"
+            demo: "https://github.com/Xvfikri/fleek-project",
+            github: "https://github.com/Xvfikri/fleek-project"
         },
         techStack: ["Next.js 14", "Prisma ORM", "PostgreSQL", "Zustand State Management", "NextAuth.js"],
         features: [
@@ -92,10 +92,10 @@ export const projects: Project[] = [
         slug: "natural-in-cosmetic",
         description: "Web and Mobile application for e-commerce focusing on natural cosmetic products.",
         longDescription: "An e-commerce solution developed for a cosmetic brand, featuring a responsive web storefront and a companion mobile app. The system handles product catalogs, shopping carts, secure checkout flows, and order management.",
-        image: "/projects/ecommerce.png",
-        tags: ["Laravel", "Jquery", "Bootstrap"],
-        role: "Fullstack Developer",
-        timeline: "2023",
+        image: "/projects/nic.png",
+        tags: ["Laravel", "Jquery", "Bootstrap", "Flutter"],
+        role: "Frontend & Mobile Developer",
+        timeline: "2025",
         links: {
             demo: "#",
             github: "#"
@@ -111,68 +111,71 @@ export const projects: Project[] = [
     },
     {
         id: "5",
-        title: "My Vote",
-        slug: "my-vote",
-        description: "Web application for voting",
-        longDescription: "A secure and transparent voting platform designed for small to medium-scale elections.",
-        image: "/projects/ecommerce.png",
-        tags: ["Php Native", "Css"],
-        role: "Backend Developer",
-        timeline: "2023",
+        title: "Mini Ecommerce Portofolio",
+        slug: "mini-ecommerce",
+        description: "A full-stack mini e-commerce platform built for high performance and clean UI.",
+        longDescription: "This mini e-commerce project demonstrates a full-featured online store system. It includes a responsive product catalog, a shopping cart managed with JQuery, and a secure checkout simulation. Built with Laravel 11 and styled with Tailwind CSS, it focuses on modern architecture and user-centric design.",
+        image: "/projects/miniecommerce.png",
+        tags: ["Laravel 11", "Tailwind CSS", "Jquery", "MySql", "Blade"],
+        role: "Fullstack Developer",
+        timeline: "2025",
         links: {
-            demo: "#",
-            github: "#"
+            demo: "https://github.com/Xvfikri/mini-ecommerce-portofolio",
+            github: "https://github.com/Xvfikri/mini-ecommerce-portofolio"
         },
-        techStack: ["PHP", "MySQL", "CSS3", "JavaScript"],
+        techStack: ["Laravel 11", "MySQL", "Tailwind CSS", "JQuery"],
         features: [
-            "Secure voter authentication",
-            "Real-time vote tallying",
-            "Admin panel for candidate management",
-            "Vote history tracking"
+            "Dynamic product catalog with filtering",
+            "Interactive shopping cart system",
+            "Secure user authentication and profiles",
+            "Responsive administrative dashboard",
+            "Checkout process simulation"
         ]
     },
     {
         id: "6",
-        title: "TriCoffee",
-        slug: "tricoffee",
-        description: "Web and Mobile application for coffee shop ordering and loyalty rewards.",
-        longDescription: "TriCoffee facilitates digital ordering for coffee shops, allowing customers to browse menus, customize orders, and earn loyalty points. It bridges the gap between online convenience and in-store experience.",
-        image: "/projects/ecommerce.png",
-        tags: ["Php Native", "Css"],
+        title: "Warehouse Management System",
+        slug: "warehouse-management-system",
+        description: "A robust system for tracking inventory, managing stock levels, and streamlining warehouse operations.",
+        longDescription: "The Warehouse Management System (WMS) is designed to optimize inventory accuracy and operational efficiency. It features real-time stock tracking, inbound/outbound logging, and comprehensive reporting. The integration of Vite and JQuery ensures a snappy, interactive user interface for warehouse staff.",
+        image: "/projects/warehouse.png",
+        tags: ["Laravel 11", "Tailwind CSS", "Jquery", "MySql", "Vite"],
         role: "Fullstack Developer",
-        timeline: "2023",
+        timeline: "2025",
         links: {
-            demo: "#",
-            github: "#"
+            demo: "https://github.com/Xvfikri/warehouse-system-portofolio",
+            github: "https://github.com/Xvfikri/warehouse-system-portofolio"
         },
-        techStack: ["PHP", "MySQL", "CSS", "REST API"],
+        techStack: ["Laravel 11", "MySQL", "Tailwind CSS", "JQuery", "Vite"],
         features: [
-            "Digital menu with customization options",
-            "Loyalty points system",
-            "Order tracking",
-            "Admin dashboard for inventory"
+            "Real-time stock monitoring and alerts",
+            "Supplier and customer management",
+            "Comprehensive inbound and outbound logging",
+            "Detailed inventory analytics and reports",
+            "Multi-user role-based access control"
         ]
     },
     {
         id: "7",
-        title: "Product Management",
-        slug: "product-management",
-        description: "Internal tool for inventory and product lifecycle management.",
-        longDescription: "A bespoke internal tool developed to streamline inventory tracking and product management workflows. It allows staff to create, update, and monitor stock levels efficiently.",
-        image: "/projects/ecommerce.png",
-        tags: ["Php Native", "Css"],
-        role: "Backend Developer",
-        timeline: "2022",
+        title: "Academic Portal",
+        slug: "academic-portal",
+        description: "A digital platform for managing academic data, student enrollments, and institutional workflows.",
+        longDescription: "The Academic Portal provides a centralized hub for students and faculty. It handles course registration, grade management, and student profiles. Engineered using Laravel 11's latest features, it offers a secure and scalable solution for educational institutions.",
+        image: "/projects/AcademicPortal.png",
+        tags: ["Laravel 11", "Tailwind CSS", "MySql", "Vite"],
+        role: "Fullstack Developer",
+        timeline: "2025",
         links: {
-            demo: "#",
-            github: "#"
+            demo: "https://github.com/Xvfikri/academic-portal.git",
+            github: "https://github.com/Xvfikri/academic-portal.git"
         },
-        techStack: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
+        techStack: ["Laravel 11", "MySQL", "Tailwind CSS", "Vite"],
         features: [
-            "CRUD operations for products",
-            "Stock level alerts",
-            "Sales reporting and analytics",
-            "User access control"
+            "Student registration and enrollment",
+            "Grade and performance tracking",
+            "Faculty management dashboard",
+            "Course schedule and resource management",
+            "Automated academic reporting"
         ]
     },
 ];
