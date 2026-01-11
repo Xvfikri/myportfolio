@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, ExternalLink, Github, Calendar, User, Code2, CheckCircle2 } from "lucide-react"
+import { ArrowLeft, ExternalLink, Github, Calendar, User, Code2, CheckCircle2, Lock, EyeOff } from "lucide-react"
 import { FloatingNav } from "@/components/floating-nav"
 import { Footer } from "@/components/footer"
 
@@ -36,13 +36,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {/* Hero Banner */}
             <section className="relative h-[50vh] min-h-[400px] w-full mt-24 px-4 container mx-auto rounded-3xl overflow-hidden">
                 <div className="absolute inset-0">
-                    <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover blur-sm scale-105 opacity-50"
-                        priority
-                    />
+                    {project.isConfidential ? (
+                        <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-zinc-950 flex items-center justify-center">
+                            <div className="absolute inset-0 bg-primary/5" />
+                            <Lock className="w-24 h-24 text-primary/10" />
+                        </div>
+                    ) : (
+                        <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-cover blur-sm scale-105 opacity-50"
+                            priority
+                        />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
                 </div>
 
@@ -101,14 +108,34 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         </div>
 
                         {/* Gallery / Detail Image */}
-                        <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-card">
-                            <Image
-                                src={project.image}
-                                alt={`${project.title} Preview`}
-                                width={1200}
-                                height={675}
-                                className="w-full h-auto"
-                            />
+                        <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-card aspect-video relative flex flex-col items-center justify-center p-12 text-center">
+                            {project.isConfidential ? (
+                                <div className="absolute inset-0 bg-gradient-to-tr from-zinc-900 via-zinc-950 to-black flex flex-col items-center justify-center p-8">
+                                    <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                                        <Lock className="w-10 h-10 text-primary" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-2">Confidential Infrastructure</h3>
+                                    <p className="text-muted-foreground max-w-sm mx-auto text-sm">
+                                        Visual gallery is disabled to comply with corporate security standards and non-disclosure agreements.
+                                    </p>
+                                    <div className="mt-8 flex gap-2">
+                                        <Badge variant="outline" className="text-[10px] uppercase tracking-widest px-3 py-1 bg-background/50">
+                                            Internal Only
+                                        </Badge>
+                                        <Badge variant="outline" className="text-[10px] uppercase tracking-widest px-3 py-1 bg-background/50">
+                                            Proprietary
+                                        </Badge>
+                                    </div>
+                                </div>
+                            ) : (
+                                <Image
+                                    src={project.image}
+                                    alt={`${project.title} Preview`}
+                                    width={1200}
+                                    height={675}
+                                    className="w-full h-auto"
+                                />
+                            )}
                         </div>
                     </div>
 

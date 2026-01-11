@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
-import { Github, ExternalLink, ArrowUpRight } from "lucide-react"
+import { Github, ExternalLink, ArrowUpRight, Lock, EyeOff } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import {
@@ -57,13 +57,25 @@ export function Projects() {
                                         <Card className="overflow-hidden flex flex-col h-full hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-2 border-primary/10 bg-card/50 backdrop-blur-[4px] md:backdrop-blur-sm group">
                                             <div className="relative aspect-video overflow-hidden">
                                                 <Link href={`/projects/${project.slug}`}>
-                                                    <Image
-                                                        src={project.image}
-                                                        alt={project.title}
-                                                        fill
-                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                                        className="object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer"
-                                                    />
+                                                    {project.isConfidential ? (
+                                                        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-950 flex flex-col items-center justify-center p-6 text-center group-hover:scale-105 transition-transform duration-700 aspect-video relative">
+                                                            <div className="absolute inset-0 bg-primary/5 opacity-50 group-hover:opacity-100 transition-opacity" />
+                                                            <Lock className="w-10 h-10 text-primary/40 mb-3 group-hover:text-primary/60 transition-colors" />
+                                                            <h3 className="text-xl font-bold text-zinc-400 group-hover:text-zinc-200 transition-colors tracking-tight">{project.title}</h3>
+                                                            <div className="mt-2 flex items-center gap-1.5 text-zinc-500 text-[10px] uppercase tracking-[0.2em] font-medium">
+                                                                <EyeOff className="w-3 h-3" />
+                                                                Private Implementation
+                                                            </div>
+                                                        </div>
+                                                    ) : (
+                                                        <Image
+                                                            src={project.image}
+                                                            alt={project.title}
+                                                            fill
+                                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                            className="object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer"
+                                                        />
+                                                    )}
                                                 </Link>
                                                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 pointer-events-none">
                                                     <div className="pointer-events-auto flex gap-4">
