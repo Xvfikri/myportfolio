@@ -22,7 +22,7 @@ export function About() {
                         </p>
                         <p>
                             With a strong foundation in modern web technologies, I specialize in building robust applications using
-                            <span className="text-foreground font-medium"> Next.js, Nuxt.js, Laravel, Vue.js,</span> and <span className="text-foreground font-medium">Flutter</span>.
+                            <span className="text-foreground font-medium"> Next.js, Nuxt.js, Laravel, React.js,</span> and <span className="text-foreground font-medium">Flutter</span>.
                             I bring ideas to life with clean, efficient, and maintainable code, whether it&apos;s a complex web ecosystem or a high-performance mobile application.
                         </p>
                     </div>

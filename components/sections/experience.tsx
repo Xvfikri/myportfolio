@@ -8,11 +8,11 @@ import { Briefcase } from "lucide-react"
 const experiences = [
     {
         company: "Aku Pintar Indonesia",
-        role: "Frontend Developer",
-        type: "Contract",
+        role: "Fullstack Developer",
+        type: "Remote Contract",
         duration: "October 2025 – Present",
-        description: "Building a web application for a local company using Next.js and TypeScript. Implementing responsive design and integrating third-party APIs.",
-        skills: ["Next.js", "TypeScript", "Tailwind CSS", "AWS"],
+        description: "Building a web application using Next.js for Frontend and Express.js for Backend. Implementing responsive design and integrating third-party APIs.",
+        skills: ["Next.js", "Express.js", "MySql", "Tailwind CSS", "Rest API"],
     },
     {
         company: "United Transworld Trading",
@@ -44,7 +44,7 @@ const experiences = [
         type: "Freelance",
         duration: "March 2025– Mei 2025",
         description: "Developed and maintained multiple client websites using Next.js and Node.js. Integrated various third-party APIs",
-        skills: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Express"],
+        skills: ["Next.js", "TypeScript", "Node.js", "Express"],
     },
     {
         company: "Cyber Army",
