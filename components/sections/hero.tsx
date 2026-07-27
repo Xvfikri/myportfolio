@@ -55,7 +55,7 @@ export function Hero() {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
-                        Fullstack And Mobile Developer passionate about creating seamless user experiences.
+                        Frontend And Mobile Developer passionate about creating seamless user experiences.
                     </motion.p>
 
                     <motion.div
@@ -143,7 +143,7 @@ export function Hero() {
                                 </div>
                                 <div className="text-sm">
                                     <p className="font-bold text-foreground">Years Experience</p>
-                                    <p className="text-muted-foreground">Fullstack & Mobile Dev</p>
+                                    <p className="text-muted-foreground">Frontend & Mobile Dev</p>
                                 </div>
                             </div>
                         </motion.div>
