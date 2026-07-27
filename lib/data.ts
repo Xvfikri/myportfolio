@@ -99,7 +99,7 @@ export const projects: Project[] = [
         role: "Frontend & Mobile Developer",
         timeline: "2025",
         links: {
-            demo: "#",
+            demo: "https://nic.co.id/",
             github: "#"
         },
         techStack: ["Laravel 9", "MySQL", "jQuery", "Bootstrap 5", "Stripe API"],
@@ -218,7 +218,7 @@ export const projects: Project[] = [
         role: "Frontend Developer",
         timeline: "2025",
         links: {
-            demo: "https://akupintar.id",
+            demo: "https://appkonsul.akupintar.id/",
             github: "#"
         },
         techStack: ["Next.js 14", "Tailwind CSS", "TypeScript", "TanStack Query", "Socket.io"],
@@ -235,7 +235,6 @@ export const projects: Project[] = [
         title: "Aku Pintar Indonesia Website",
         slug: "aku-pintar-website",
         company: "Aku Pintar Indonesia",
-        isConfidential: true,
         description: "The primary web platform for Aku Pintar, serving millions of students across Indonesia with educational resources and tools.",
         longDescription: "The official website of Aku Pintar Indonesia, a leading ed-tech platform. I contributed to the modernization of the portal using Next.js and Tailwind CSS, focusing on SEO optimization, mobile responsiveness, and scalable component architecture. The platform includes diagnostic tests, school databases, and extensive educational content tailored for Indonesian students.",
         image: "/projects/akupintar.png",
@@ -246,7 +245,7 @@ export const projects: Project[] = [
             demo: "https://akupintar.id",
             github: "#"
         },
-        techStack: ["Next.js 15", "Tailwind CSS", "TypeScript", "Contentful CMS", "AWS"],
+        techStack: ["React.js", "Tailwind CSS", "TypeScript", "Contentful CMS", "AWS"],
         features: [
             "Highly optimized landing pages for SEO",
             "Large-scale school and university database search",

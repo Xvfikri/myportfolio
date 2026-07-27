@@ -16,7 +16,7 @@ export function About() {
                     <h2 className="text-3xl font-bold tracking-tight mb-8 sm:text-4xl">About Me</h2>
                     <div className="text-lg text-muted-foreground space-y-6 leading-relaxed">
                         <p>
-                            I am a passionate and dedicated Fullstack Developer and a proud graduate of <span className="text-primary font-semibold">Telkom University</span>.
+                            I am a passionate and dedicated Frontend Developer and a proud graduate of <span className="text-primary font-semibold">Telkom University</span>.
                             My journey in web development is driven by a desire to create seamless user experiences and solve complex problems through code.
                             Efficiency and performance are key to my development philosophy.
                         </p>
